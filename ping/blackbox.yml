@@ -1,0 +1,6 @@
+modules:
+  icmp:                         # <== this is the one you already have
+    prober: icmp
+    timeout: 5s                # <== This depends on what you want to do
+    icmp:
+      preferred_ip_protocol: ip4

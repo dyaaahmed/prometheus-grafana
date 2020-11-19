@@ -16,3 +16,8 @@ services:
     command: "--config.file=/config/blackbox.yml"
     volumes:
       - "./blackbox:/config/"
+  ping: 
+    image: prom/blackbox-exporter
+    command: "--config.file=/config/blackbox.yml"
+    volumes:
+      - "./ping:/config/"

@@ -2,3 +2,5 @@ version: '3'
 services:
   exporter:
     image: prom/node-exporter
+    ports:
+      - 9113:9100
