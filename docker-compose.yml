@@ -8,9 +8,11 @@ services:
     ports: 
       - "9090:9090"
   grafana: 
-    image: grafana/grafana
+    image: bitnami/grafana
     ports:
       - "3000:3000"
+    volumes: 
+      - "./grafana:/opt/bitnami/grafana/data"
   blackbox:
     image: prom/blackbox-exporter
     command: "--config.file=/config/blackbox.yml"
